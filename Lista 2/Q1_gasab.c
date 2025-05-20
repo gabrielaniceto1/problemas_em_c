@@ -1,3 +1,24 @@
+/*
+beecrowd | 1251
+Diga-me a Frequência
+Por Shahriar Manzoor,  Bangladesh
+
+
+Dada uma linha de texto, você deve encontrar as frequências de cada um dos caracteres presentes nela. 
+As linhas fornecidas não conterão nenhum dos primeiros 32 ou dos últimos 128 caracteres da tabela ASCII. 
+É claro que não estamos levando em conta o caracter de fim de linha.
+
+Entrada
+A entrada contém vários casos de teste. Cada caso de teste é composto por uma única linha de texto com até 1000 caracteres.
+
+Saída
+Imprima o valor ASCII de todos os caracteres presentes e a sua frequência de acordo com o formato abaixo. 
+Uma linha em branco deverá separar 2 conjuntos de saída. Imprima os caracteres ASCII em ordem ascendente de frequência. 
+Se dois caracteres estiverem presentes com a mesma quantidade de frequência, imprima primeiro o caracter que tem valor ASCII maior. 
+A entrada é terminada por final de arquivo (EOF).
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
