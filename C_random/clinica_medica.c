@@ -27,7 +27,7 @@ void inserir_fila(struct Node **head, struct Node **tail, char *nome){
 }
 
 void remover_fila(struct Node **head, struct Node **tail){
-    struct Node *aux = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *aux = (*head);
     if(aux == NULL){
         printf("Erro ao alocar memoria!\n");
         return;
@@ -37,7 +37,6 @@ void remover_fila(struct Node **head, struct Node **tail){
         return;
     }
     else{
-        aux = (*head);
         (*head) = (*head)->next;
         free(aux);
 
@@ -49,7 +48,7 @@ void remover_fila(struct Node **head, struct Node **tail){
 }
 
 void consultar_fila(struct Node *head){
-    int count = 0;
+    int count = 1;
     char nome[30];
 
     if(head == NULL){
@@ -76,16 +75,14 @@ int main(){
     struct Node *tail = NULL;
     int cont = 0;
 
-    printf("Clínica Médica\n\n=============\n\n(1) Incluir paciente\n\n(2) Realizar atendimento do paciente (remoção do paciente)\n\n(3) Consultar a posição atual do paciente pelo nome\n\n(4) Exibir a quantidade de pacientes já atendidos\n\n(5) Sair\n\n");
-
-    int opcao;
-    scanf(" %d", &opcao);
-
     while(1){
+        printf("Clínica Médica\n\n=============\n\n(1) Incluir paciente\n\n(2) Realizar atendimento do paciente (remoção do paciente)\n\n(3) Consultar a posição atual do paciente pelo nome\n\n(4) Exibir a quantidade de pacientes já atendidos\n\n(5) Sair\n\n");
+        int opcao;
+        scanf(" %d", &opcao);
         if(opcao == 1){
             char nome[30];
             printf("Digite o nome do paciente: \n");
-            scanf(" %s\n", &nome);
+            scanf(" %29[^\n]", nome);
             inserir_fila(&head, &tail, nome);
         }
         else if(opcao == 2){
@@ -93,7 +90,7 @@ int main(){
             cont++;
         }
         else if(opcao == 3){
-            consultar_fila(&head);
+            consultar_fila(head);
         }
         else if(opcao == 4){
             printf(" %d usuarios atendidos\n", cont);
@@ -101,8 +98,7 @@ int main(){
         else if(opcao == 5){
             printf("Fechando programa ...\n");
             while(head != NULL){
-                struct Node *aux =(struct Node *) malloc(sizeof(struct Node));
-                aux = head;
+                struct Node *aux = head;
                 head = head->next;
                 free(aux);
             }
