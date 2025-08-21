@@ -37,6 +37,7 @@ void remover_fila(struct Node **head, struct Node **tail){
         return;
     }
     else{
+        printf("Paciente: %s\n", (*head)->nome);
         (*head) = (*head)->next;
         free(aux);
 
