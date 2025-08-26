@@ -9,6 +9,9 @@ struct Pessoa {
 void inserir_fila(struct Pessoa **head, struct Pessoa **tail, char *nome){
     if(*head == NULL){
         *head = (struct Pessoa *)malloc(sizeof(struct Pessoa));
+        if(*head == NULL){
+            return;
+        }
         strcpy((*head)->nome,nome);
         (*head)->next = NULL;
         *tail = *head;  
