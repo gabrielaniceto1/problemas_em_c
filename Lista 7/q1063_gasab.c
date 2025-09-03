@@ -1,20 +1,3 @@
-Conversation opened. 1 unread message.
-
-Skip to content
-Using CESAR School Mail with screen readers
-
-2 of 2,850
-codigo q2
-Inbox
-
-AMANDA LUZ CHAVES <alc2@cesar.school>
-Attachments
-11:54 AM (1 hour ago)
-to me
-
-
- One attachment
-  •  Scanned by Gmail
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -85,5 +68,3 @@ int main(){
     }
     return 0;
 }
-q2.c
-Displaying q2.c.
