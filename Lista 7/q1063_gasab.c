@@ -1,74 +1,89 @@
-#include <stdio.h>
+Conversation opened. 1 unread message.
+
+Skip to content
+Using CESAR School Mail with screen readers
+
+2 of 2,850
+codigo q2
+Inbox
+
+AMANDA LUZ CHAVES <alc2@cesar.school>
+Attachments
+11:54 AM (1 hour ago)
+to me
+
+
+ One attachment
+  •  Scanned by Gmail
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 struct Node{
     char caracter;
     struct Node *next;
 };
 
-void inserir_pilha(struct Node **head, char caracter){
+void inserirPilha(struct Node **head, char caracter){
     struct Node *novo = (struct Node *)malloc(sizeof(struct Node));
-    if(novo == NULL) exit(1);
+    if(novo == NULL) return;
     novo->caracter = caracter;
     novo->next = *head;
     *head = novo;
 }
-
 void remover_pilha(struct Node **head){
-    if(!*head) return;
     struct Node *aux = *head;
     *head = (*head)->next;
     free(aux);
 }
-
 int main(){
-    struct Node *headDO = NULL;
+    struct Node *head = NULL;
     int cont = -1;
-
-
-    while (cont != 0) {
+    while(1){
         scanf("%d", &cont);
+        if(cont == 0) break;
 
         char desordenado[27], ordenado[27];
-        for (int i = 0; i < cont; i++){
+        for(int i = 0; i <  cont; i++){
             scanf(" %c", &desordenado[i]);
-        } 
+        }
         desordenado[cont] = '\0';
         for (int i = 0; i < cont; i++){
             scanf(" %c", &ordenado[i]);
-        } 
+        }
         ordenado[cont] = '\0';
 
         char operacoes[64];
         operacoes[0] = '\0';
 
-        int i_empilhar_desordenado = 0;
-        int i_empilhar_ordenado = 0;
+        int i_ordenado = 0;
+        int i_desordenado = 0;
 
-        while(i_empilhar_ordenado < cont) {
-            while((headDO == NULL || headDO->caracter != ordenado[i_empilhar_ordenado]) && i_empilhar_desordenado < cont) {
-                inserir_pilha(&headDO, desordenado[i_empilhar_desordenado]);
-                i_empilhar_desordenado++;
+        while(i_ordenado < cont){
+            while((head == NULL || head->caracter != ordenado[i_ordenado]) && i_desordenado < cont){
+                inserirPilha(&head, desordenado[i_desordenado]);
+                i_desordenado++;
                 strcat(operacoes, "I");
             }
-
-            if(headDO != NULL && headDO->caracter == ordenado[i_empilhar_ordenado]) {
-                remover_pilha(&headDO);
+            if(head != NULL && head->caracter == ordenado[i_ordenado]){
+                remover_pilha(&head);
+                i_ordenado++;
                 strcat(operacoes, "R");
-                i_empilhar_ordenado++;
             }
             else{
                 strcat(operacoes, " Impossible");
                 break;
             }
         }
-
         printf("%s\n", operacoes);
-
-        while (headDO != NULL){
-            remover_pilha(&headDO);
-        } 
+        while(head != NULL){
+            struct Node *aux = head;
+            head = head->next;
+            free(aux);
+        }
+        
     }
     return 0;
 }
+q2.c
+Displaying q2.c.
