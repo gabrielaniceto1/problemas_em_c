@@ -83,6 +83,7 @@ void remover_final(Node **head){
     }
     Node *dell = aux->next;
     free(dell);
+    aux->next = NULL;
 }
 void remocao_final_tail(Node **head, Node **tail){
     if(*head == NULL) return;
