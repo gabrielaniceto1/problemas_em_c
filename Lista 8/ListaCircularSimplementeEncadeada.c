@@ -58,12 +58,24 @@ int strLista(Node* head, Node *tail){
     return cont;
 }
 void remover_inicio(Node **head, Node **tail){
+    if(*head == NULL) return;
+    if(*head == *tail){
+        free(*head);
+        *tail = NULL;
+        return;
+    } 
     Node *aux = *head;
     *head = (*head)->next;
     (*tail)->next = *head;
     free(aux);
 }
 void remover_fim(Node **head, Node **tail){
+    if(*head == NULL) return;
+    if(*head == *tail){
+        free(*head);
+        *tail = NULL;
+        return;
+    } 
     Node *aux = *head;
     while(aux->next != *tail){
         aux = aux->next;
