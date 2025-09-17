@@ -8,11 +8,11 @@ typedef struct Node{
 
 void inserir_inicio(Node **head, Node **tail, int val){
     Node *novo = (Node*)malloc(sizeof(Node));
-    if(novo = NULL) return;
+    if(novo == NULL) return;
     novo->val = val;
     novo->next = NULL;
 
-    if(*head = NULL){
+    if(*head == NULL){
         novo->next = *head;
         *head = novo;
         *tail = *head;
@@ -25,11 +25,11 @@ void inserir_inicio(Node **head, Node **tail, int val){
 }
 void inserir_fim(Node **head, Node **tail, int val){
     Node *novo = (Node*)malloc(sizeof(Node));
-    if(novo = NULL) return;
+    if(novo == NULL) return;
     novo->val = val;
     novo->next = NULL;
 
-    if(*head = NULL){
+    if(*head == NULL){
         novo->next = *head;
         *head = novo;
         *tail = *head;
