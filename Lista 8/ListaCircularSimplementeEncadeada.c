@@ -60,8 +60,8 @@ int strLista(Node* head, Node *tail){
 void remover_inicio(Node **head, Node **tail){
     Node *aux = *head;
     *head = (*head)->next;
-    free(aux);
     (*tail)->next = *head;
+    free(aux);
 }
 void remover_fim(Node **head, Node **tail){
     Node *aux = *head;
