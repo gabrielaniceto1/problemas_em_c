@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <pthread.h>
 
 int fatorial(int num){
     if(num == 1 || num == 0){
@@ -24,7 +25,7 @@ void intercalar(int vetor[], int inicio, int meio, int fim) {
     // enquanto houver elementos nas duas metades, escolhe o menor e coloca no aux
     while (iEsq <= meio && iDir <= fim) {
         if (vetor[iEsq] <= vetor[iDir]) aux[iAux++] = vetor[iEsq++];
-        else                            aux[iAux++] = vetor[iDir++];
+        else aux[iAux++] = vetor[iDir++];
     }
 
     // copia o que sobrou da metade esquerda (se sobrou)
