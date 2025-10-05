@@ -33,11 +33,12 @@ void inserir_fim(Node **head, Node **tail, int val, char *nome){
     }
 }
 void getNomeVencedor(Node **head, Node **tail, char *nomeVencedor){
+    //ver se a head é null, se for retorna
     if(*head == NULL){
         strcpy(nomeVencedor, "");
         return;
     }  
-
+    //ve se so tem uma criança, se sim retorna ela mesma
     if(*head == *tail){
         strcpy(nomeVencedor, (*head)->nome);
         free(*head);
@@ -45,40 +46,49 @@ void getNomeVencedor(Node **head, Node **tail, char *nomeVencedor){
         *tail = NULL;
         return;
     }
+    //contador para andar no circulo
     int casasAndar = (*head)->val;
     
-    Node *aux = (casasAndar % 2 == 0) ? (*head)->next : (*head)->prev;
+    //define o lado que vai começar (horario ou anti-horario) a partir de ser par ou impar
+    Node *aux = (casasAndar % 2 == 0) ? (*head)->prev : (*head)->next;
     
+    //loop principal que elimina todas as crianças do circulo ate sobrar uma
     while(*head != *tail){
+        // se for par, roda horario
         if(casasAndar % 2 == 0){
-            int cont = 1;
-            while (cont++ < casasAndar){
-                aux = aux->next;
-            }
-        }
-        else{
             int cont = 1;
             while (cont++ < casasAndar){
                 aux = aux->prev;
             }
         }
-    
+        //se nao for par, roda anti horario
+        else{
+            int cont = 1;
+            while (cont++ < casasAndar){
+                aux = aux->next;
+            }
+        }
+        //cria um ponteiro para a remoção e outros dois que vão representar o proximo e anterior
         Node *remover = aux;
-        Node * next = aux->next;
+        Node *next = aux->next;
         Node *prev = aux->prev;
         
+        //seta o valor que ele irá andar no proximo loop e define o auxiliar para andar horario ou anti-horario a depender do valor
+        //de casasAndar
         casasAndar = remover->val;
-        aux = (casasAndar % 2 == 0) ? next : prev;
+        aux = (casasAndar % 2 == 0) ? prev : next;
         
-
+        //confere se o valor que vai ser removido parou na head ou na tail e trata
         if(remover == *head) *head = (*head)->next;
         if(remover == *tail) *tail = (*tail)->prev;
 
+        //faz as ligações de prev e next, deixando remover de fora
         next->prev = prev;
         prev->next = next;
-
+        //remove
         free(remover);
     }
+    //após sobrar um unico no, coopia para um buffer de fora da função e remove o ultimo valor. seta tail e head para null
     strcpy(nomeVencedor, (*head)->nome);
     free(*head);
     *head = *tail = NULL;
