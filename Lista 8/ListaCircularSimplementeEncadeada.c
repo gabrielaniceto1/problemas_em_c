@@ -13,8 +13,8 @@ void inserir_inicio(Node **head, Node **tail, int val){
     novo->next = NULL;
 
     if(*head == NULL){
-        novo->next = *head;
         *head = novo;
+        novo->next = *head;
         *tail = *head;
     }
     else{
@@ -30,8 +30,8 @@ void inserir_fim(Node **head, Node **tail, int val){
     novo->next = NULL;
 
     if(*head == NULL){
+       *head = novo;
         novo->next = *head;
-        *head = novo;
         *tail = *head;
     }
     else{
