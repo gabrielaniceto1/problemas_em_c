@@ -25,7 +25,51 @@ void inserir(Tree **head, int val){
         inserir(&(*head)->right,val);
     }
 }
+void remover_no(Tree **root, int val){
+    if(*root == NULL) return;
+    if(val < (*root)->val){
+        remover_no(&(*root)->left, val);
+    }
+    else if(val > (*root)->val){
+        remover_no(&(*root)->right, val);
+    }
+    else{
+        if((*root)->right == NULL && (*root)->left == NULL){
+            Tree *remover = *root;
+            *root = NULL;
+            free(remover);
+        }
+        else if((*root)->right == NULL){
+            Tree *remover = *root;
+            *root = (*root)->left;
+            free(remover);
+        }
+        else if((*root)->left == NULL){
+            Tree *remover = *root;
+            *root = (*root)->right;
+            free(remover);
+        }
+        else{
+            Tree *antSucessor = *root;
+            Tree *sucessor = (*root)->left;
+            while(sucessor->right != NULL){
+                antSucessor = sucessor;
+                sucessor = sucessor->right;
+            }
+            
+            (*root)->val = sucessor->val;
 
+            if (antSucessor->right == sucessor) {
+                antSucessor->right = sucessor->left;
+            }
+            else {
+                antSucessor->left = sucessor->left;
+            }
+
+            free(sucessor);
+        }   
+    }
+}
 Tree* maior_valor(Tree *root) {
     if (root == NULL) return NULL;
     if (root->right == NULL) return root;
@@ -54,7 +98,28 @@ int verificar_filhos_par(Tree *root){
     if((root->left == NULL && root->right == NULL) || (root->left != NULL && root->right != NULL)) return 1;
     return 0;    
 }
-
+void preordem(Tree *root){
+    if( root != NULL){
+        printf("%d ", root->val);
+        preordem(root->left);
+        preordem(root->right);
+    }
+    
+}
+void inordem(Tree *root){
+    if(root != NULL){
+        inordem(root->left);
+        printf("%d ", root->val);
+        inordem(root->right);
+    }
+}
+void posordem(Tree *root){
+    if(root != NULL){
+        posordem(root->left);
+        posordem(root->right);
+        printf("%d ", root->val);
+    }
+}
 int main(){
 
     Tree * root = NULL;
@@ -67,6 +132,15 @@ int main(){
     inserir(&root, 7);
     inserir(&root, 8);
 
+    preordem(root);
+    printf("\n");
+
+    inordem(root);
+    printf("\n");
+
+    posordem(root);
+    printf("\n");
+    
     int valor = verificar_filhos_par(root);
     printf("%d", valor);
     return 0;
