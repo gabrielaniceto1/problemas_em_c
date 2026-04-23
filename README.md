@@ -25,7 +25,6 @@ Throughout this repository, the problems and implementations are organized with 
 ## Index
 
 ### Exercise Lists
-### Exercise Lists
 - [List 1](#lista-1)
 - [List 2](#lista-2)
 - [List 3](#lista-3)
