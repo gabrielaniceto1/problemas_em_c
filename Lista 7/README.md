@@ -1,7 +1,5 @@
 ## Lista 7
 
-**Folder:** `Lista 7/`
-
 This folder continues the practice with **stacks, queues, linked lists, string parsing, and ordering rules**, but with a stronger focus on **sequence transformation** and **text processing**.
 
 Compared to `Lista 6`, which is more centered on implementing classic queue and stack operations, `Lista 7` uses these same structures in more problem-oriented scenarios, where the challenge is to simulate behavior, remove duplicates, sort strings, and organize grouped data.

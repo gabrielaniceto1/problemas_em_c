@@ -1,7 +1,5 @@
 ## Lista 9
 
-**Folder:** `Lista 9/`
-
 This folder continues the study of **linked lists and simulations**, with a stronger focus on **circular structures**, **elimination processes**, and **time-based analysis**.
 
 Compared to the previous lists, `Lista 9` emphasizes problems where the data structure is not just a storage mechanism, but the core of the algorithm itself. The main challenge here is simulating behavior over linked structures while preserving pointer consistency.

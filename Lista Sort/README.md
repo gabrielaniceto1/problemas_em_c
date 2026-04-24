@@ -1,7 +1,5 @@
 ## Lista Sort
 
-**Folder:** `Lista Sort/`
-
 This folder is dedicated to **sorting algorithms**, with implementations and benchmark-style tests over different input scenarios such as **already sorted arrays**, **reverse-sorted arrays**, and **random arrays**.
 
 Compared to the numbered lists, this section is much more focused on **algorithm analysis**, especially on how different sorting strategies behave in terms of:

@@ -1,7 +1,5 @@
 ## Lista 2
 
-**Folder:** `Lista 2/`
-
 This folder expands the repository with problems centered on **strings, ASCII processing, validation rules, custom ordering, and text reconstruction**.
 
 Compared to the first list, this set places a stronger emphasis on **character manipulation**, **string comparison**, **input handling with text lines**, and **rule-based problem solving**, which are essential skills in C programming.

@@ -1,7 +1,5 @@
 ## Lista 10
 
-**Folder:** `Lista 10/`
-
 This folder advances into classic **searching and tree-based data structures**, especially **binary search trees**, **linear and binary search**, and **hash tables with open addressing**.
 
 Compared to the previous lists, `Lista 10` shifts the focus from linked structures and sorting into problems that are more directly related to **data organization, retrieval, and structural properties**.

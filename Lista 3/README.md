@@ -1,7 +1,5 @@
 ## Lista 3
 
-**Folder:** `Lista 3/`
-
 This folder moves further into problems that require more structured reasoning, combining **sorting rules, simulations, dynamic memory usage, structs, and hash table concepts**.
 
 Compared to the previous lists, `Lista 3` puts more emphasis on **data organization**, **custom ordering criteria**, **state transitions**, and **intermediate-level implementation details in C**.

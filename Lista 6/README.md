@@ -1,7 +1,5 @@
 ## Lista 6
 
-**Folder:** `Lista 6/`
-
 This folder is centered on **fundamental linear data structures in C**, especially **queues**, **stacks**, and **linked lists**.
 
 Unlike the previous lists, which are mostly based on competitive programming problems, `Lista 6` is much more focused on **manual implementation of data structures** and on understanding how insertion, removal, traversal, and combination of structures work internally.

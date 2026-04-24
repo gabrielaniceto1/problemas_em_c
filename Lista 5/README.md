@@ -1,7 +1,5 @@
 ## Lista 5
 
-**Folder:** `Lista 5/`
-
 This folder focuses on classic recursive and mathematical problems, especially those involving **Fibonacci recursion**, **greatest common divisor**, and the **Josephus problem**.
 
 Compared to the previous lists, `Lista 5` places more emphasis on **recursive reasoning**, **mathematical structure**, and understanding how algorithmic choices affect performance, especially in time complexity.

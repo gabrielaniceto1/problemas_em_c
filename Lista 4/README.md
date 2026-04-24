@@ -1,7 +1,5 @@
 ## Lista 4
 
-**Folder:** `Lista 4/`
-
 This folder focuses strongly on **ordering, name organization, linked list insertion, ranking rules, and record selection**.
 
 Compared to the previous lists, `Lista 4` emphasizes problems where the main challenge is to **keep data sorted while it is being inserted**, apply **selection criteria**, and produce output according to specific ranking or alphabetical rules.

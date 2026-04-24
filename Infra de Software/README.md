@@ -1,7 +1,5 @@
 ## Infra de Software
 
-**Folder:** `Infra de Software/`
-
 This folder is focused on **concurrency, synchronization, and classic operating systems problems**, using practical implementations in C.
 
 Unlike the numbered lists, which are mostly centered on algorithms and data structures, this section is much closer to **systems programming**, especially topics such as:

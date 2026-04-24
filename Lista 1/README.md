@@ -1,7 +1,5 @@
 ## Lista 1
 
-**Folder:** `Lista 1/`
-
 This folder contains introductory and intermediate C problems focused on logic building, matrix manipulation, mathematical reasoning, simulation, and basic algorithm analysis.
 
 It helps strengthen core problem-solving skills while building a solid foundation in reading input, processing constraints, and implementing correct solutions in C.

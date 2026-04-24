@@ -1,7 +1,5 @@
 ## Lista 8
 
-**Folder:** `Lista 8/`
-
 This folder deepens the study of **linked lists** and expands into **sorting algorithms**, especially through implementations of **doubly linked lists**, **circular linked lists**, **Merge Sort**, and **Quick Sort**.
 
 Compared to the previous lists, `Lista 8` is more focused on **structural variations of linked lists** and on understanding how classic sorting algorithms behave internally.

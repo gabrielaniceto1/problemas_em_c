@@ -1,7 +1,5 @@
 ## Desafios
 
-**Folder:** `Desafios/`
-
 This folder is dedicated to **harder algorithmic problems**, especially challenges that require stronger optimization, deeper pattern recognition, and more advanced data structure or recursion techniques.
 
 Compared to the numbered lists, this section is much more focused on **interview-style and competitive-style problems**, where writing a correct solution is not enough — the solution also needs to be efficient in terms of **time and space complexity**.
